@@ -11,7 +11,11 @@ function App() {
     useEffect(() => {
         ScrollSmoother.create({
             wrapper: '.wrapper',
-            content: '.content'
+            content: '.content',
+            smooth: 0.5,
+            effects: true,
+            normalizeScroll: false, //disabling this makes ScrollSmoother not bug out on Iphone
+            ignoreMobileResize: true,
         })
     }, [])
 
